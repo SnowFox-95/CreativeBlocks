@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+:root {
+    --bg-color: aqua;
+    --size: 60px;
+    --radius: 16px;
+    --padding: 10px;
+    --color: #0080ff;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+.menu {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    display: grid;
+    grid-auto-rows: var(--size);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.menu::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    background-color: #fff;
+    border-radius: var(--radius);
+}
+
+.menu__item {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: #444;
+    width: var(--size);
+    height: var(--size);
+    text-decoration: none;
+    position: relative;
+}
+
+.material-symbols-outlined {}
+
+.menu__ic {
+    transition: all 0.3s ease-in-out 0.2s;
+}
+
+.menu__text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -3;
+    background-color: #fff;
+    color: var(--color);
+    max-width: 0;
+    overflow: hidden;
+    padding: 0;
+    font-size: 18px;
+    border-radius: 0 100px 100px 0;
+    transform: translateY(-50%);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+/*hover*/
+.menu__item:hover .menu__ic {
+    font-weight: bold;
+    color: white;
+}
+
+.menu__item:hover .menu__text {
+    padding: 14px 24px;
+    padding-left: 32px;
+    max-width: 1000%;
+    left: 100%;
+}
+
+.menu__item:last-child::after,
+.menu__item:last-child::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: calc(var(--size) * -6 + var(--padding) * -1);
+    left: 0;
+    z-index: -1;
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--color);
+    border-radius: var(--radius);
+    transition: all 0.3s ease-out;
+}
+
+.menu__item:last-child::after {
+    background-color: var(--bg-color);
+    border-radius: 0;
+}
+
+/*hover animation choice*/
+.menu__item:nth-child(1):hover~.menu__item:last-child::before {
+    top: calc(var(--size) * -5);
+    animation: animation 0.3s;
+}
+
+.menu__item:nth-child(2):hover~.menu__item:last-child::before {
+    top: calc(var(--size) * -4);
+    animation: animation2 0.3s;
+}
+
+.menu__item:nth-child(3):hover~.menu__item:last-child::before {
+    top: calc(var(--size) * -3);
+    animation: animation 0.3s;
+}
+
+.menu__item:nth-child(4):hover~.menu__item:last-child::before {
+    top: calc(var(--size) * -2);
+    animation: animation2 0.3s;
+}
+
+.menu__item:nth-child(5):hover~.menu__item:last-child::before {
+    top: calc(var(--size) * -1);
+    animation: animation 0.3s;
+}
+
+.menu__item:last-child:hover::before {
+    top: 0;
+    animation: animation2 0.3s;
+}
+
+@keyframes animation {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(0.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes animation2 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(0.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
