@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#000, #01042d);
+  font-family: "Titillium Web", sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.content {
+  position: relative;
+  padding: 20px;
+  color: #fff;
+}
+.content h2 {
+  position: absolute;
+  top: -60px;
+}/*# sourceMappingURL=style.css.map */
