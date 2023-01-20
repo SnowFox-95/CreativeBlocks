@@ -78,7 +78,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.5);
 }
 .box:hover .content h2 {
-  top: -140px;
+  top: -120px;
 }
 .box:hover .content button {
   transform: translateY(0);
@@ -107,4 +107,10 @@ body {
 }
 .box:nth-child(1)::before {
   background: linear-gradient(#ff0000, #0037ff);
+}
+.box:nth-child(2)::before {
+  background: linear-gradient(#daff00, #14f4ff);
+}
+.box:nth-child(3)::before {
+  background: linear-gradient(#af36ff, #ff0070);
 }/*# sourceMappingURL=style.css.map */

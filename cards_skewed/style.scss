@@ -83,7 +83,7 @@ body {
   &:hover {
     .content {
       h2 {
-        top: -140px;
+        top: -120px;
       }
 
       button {
@@ -117,6 +117,16 @@ body {
   &:nth-child(1){
     &::before{
         background: linear-gradient(#ff0000,#0037ff);
+    }
+  }
+  &:nth-child(2){
+    &::before{
+        background: linear-gradient(#daff00,#14f4ff);
+    }
+  }
+  &:nth-child(3){
+    &::before{
+        background: linear-gradient(#af36ff,#ff0070);
     }
   }
 }
