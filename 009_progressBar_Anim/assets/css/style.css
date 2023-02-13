@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+body {
+  background: linear-gradient(45deg, #93278f, #00a99d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 200px;
+}
+
+.progress {
+  cursor: pointer;
+  background-color: #111;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 70px;
+  padding: 6px;
+}
+.progress:hover .fill {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+.progress:hover .number {
+  transform: translateY(-40px);
+  visibility: visible;
+  opacity: 1;
+}
+.progress:nth-child(1) .fill {
+  background-color: #ff0000;
+  width: 35%;
+}
+.progress:nth-child(2) .fill {
+  background-color: #008000;
+  width: 65%;
+}
+.progress:nth-child(3) .fill {
+  background-color: #0000ff;
+  width: 95%;
+}
+.progress .number {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  font-size: 18px;
+  transition: 0.3s ease;
+  visibility: hidden;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.progress .fill {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.5) 75%, transparent 75%, transparent);
+  background-size: 40px;
+  border-radius: 5px;
+  height: 100%;
+  -webkit-animation: move 0.5s linear infinite paused;
+          animation: move 0.5s linear infinite paused;
+}
+
+@-webkit-keyframes move {
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+@keyframes move {
+  100% {
+    background-position: 40px 0;
+  }
+}
