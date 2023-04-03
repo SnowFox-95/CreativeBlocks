@@ -1,7 +1,11 @@
-:root{
-    --accent:#fb991b;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;600&display=swap');
+
+:root {
+    --accent: #fb991b;
 }
 
-body{
+body {
     background-color: #222429;
+    color: var(--accent);
+    font-family: 'Roboto Slab', serif;
 }
