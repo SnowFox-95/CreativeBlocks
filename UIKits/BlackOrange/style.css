@@ -2,10 +2,52 @@
 
 :root {
     --accent: #fb991b;
+    --height: 60px;
+    --radius: 16px;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: #222429;
     color: var(--accent);
     font-family: 'Roboto Slab', serif;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    grid-gap: 32px;
+    padding: 64px;
+}
+
+/*Button*/
+.buttons {
+    display: flex;
+    gap: 32px;
+    font-size: 25px;
+    font-weight: 100;
+
+}
+
+.button {
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+    padding: 0 3vw;
+    border-radius: var(--radius);
+}
+/*TODO: 22_55*/
+.button_press {
+}
+
+.button_hover {
+}
+
+.button_active {
 }
